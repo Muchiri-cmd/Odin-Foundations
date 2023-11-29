@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Page title</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--use latest available rendering engine-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <style>
+       body{
+        background-color: black;
+        color:white;
+       }
+    </style>
+    <body>
+        
+        <h1></h1>
+        
+        <p></p>
+        <script>
+            let sum = (a,b) => a+b;
+            let double = n => n*2;
+            let sayHi=()=> console.log("Greetings neighbours!");
+
+            let age=prompt("Please enter your age ",18)
+            let welcome=(age>18) ?
+                ()=>console.log("Welcome to the partyyyy!") :
+                ()=> console.log("Sorry your underage");
+            welcome();
+
+            let addition = (a,b) => {
+                let result=a+b;
+                return result;
+            };
+            alert(addition(1,2));
+
+        </script>
+    </body>

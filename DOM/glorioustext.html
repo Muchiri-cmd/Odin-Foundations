@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        TITLE
+    </h1>
+    <div id="container"></div>
+    
+    <script>
+        const body=document.querySelector('body').style;
+        body.background='black';
+        body.color='white';
+
+        const container=document.querySelector('#container');
+        
+        const content=document.createElement('div');
+        content.classList.add('content');
+        content.textContent='This is the glorious text-content';
+
+        container.appendChild(content);
+
+    </script>
+</body>
+</html>
