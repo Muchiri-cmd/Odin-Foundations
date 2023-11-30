@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button>Change color</button>
+    
+    <script>
+        const btn=document.querySelector('button');
+        const controller=new AbortController();
+
+        btn.addEventListener('click',
+        ()=>{
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+        },
+        {signal: controller .signal}//pass an abort signal to this handler
+        );
+        controller.abort();
+    </script>
+</body>
+</html>

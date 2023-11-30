@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button>Change color</button>
+
+    <script>
+        const btn=document.querySelector("button");
+
+        function random(number){
+            return Math.floor(Math.random()*(number+1));
+        }
+        function changeBackground(number){
+            const rndCol=`rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            document.body.style.backgroundColor=rndCol;
+        };
+        btn.addEventListener('click',changeBackground);//focus,mouseout,mouseover,
+        //btn.removeEventListener('click',changeBackground);
+        
+        
+        
+        
+        /*btn.onclick=()=>{
+            const rndCol=`rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            document.body.style.backgroundColor=rndCol;
+        }*/
+        //btn.onclick=changeBackground
+    </script>
+    
+</body>
+</html>
