@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    </head>
+        <body>
+            <script>
+                const favoriteBand={
+                    name:'Eclipse',
+                    nationality:'United States',
+                    genre:'Rock',
+                    members:4,
+                    formed:2005,
+                    split:false,
+                    albums:[
+                        {name:'Lunar Harmony',released:2012},
+                        {name:'Rising Sun',released:2008}
+                    ]
+                };
+                const debutAlbum=favoriteBand.albums.reduce((oldestAlbum,currentAlbum) => {
+                    return currentAlbum.released<oldestAlbum.released ? currentAlbum : oldestAlbum;
+                },favoriteBand.albums[0]);
+
+                //calculate years active
+                const currentYear=new Date().getFullYear();
+                const yearsActive = favoriteBand.split ? favoriteBand.split - favoriteBand.formed :currentYear-favoriteBand.formed;
+
+                //create bands bio string
+                const bandInfo=`${favoriteBand.name} is a ${favoriteBand.genre} band from ${favoriteBand.nationality}.Formed in ${favoriteBand.formed}, the band was active for ${yearsActive}. Their debut album ${debutAlbum.name} was released in ${debutAlbum.released}`
+                console.log(bandInfo);
+            </script>
+        </body>
+</html>

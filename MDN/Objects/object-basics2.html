@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    </head>
+        <body>
+            <script>
+                const Band={
+                    name:"HART_THE_BAND",
+                    nationality:"Kenya",
+                    genre:"Afropop",
+                    members:3,
+                    formed:2012,
+                    split:false,
+                    albums:[
+                       {
+                            name:'Made In The Streets',
+                            releaseYear:2019,
+                       },
+                       {
+                            name:'Simple Man',
+                            releaseYear:2021,
+                       },
+                       {
+                            name:'PARTY TIME',
+                            releaseYear:2022,
+                       },
+                       {
+                            name:'TIME',
+                            releaseYear:2023,
+                       },
+                      
+                    ],
+                    bandInfo(){
+                        console.log(
+                            `--------Bio----------
+                            BandName: ${this.name}.
+                            Nationality: ${this.nationality}.
+                            Years Active:  ${Band.albums[3].releaseYear-Band.albums[0].releaseYear}
+                            Style: ${this.genre}.
+                            Debut Album Release Year: ${Band.albums[0].releaseYear} 
+                            Debut Album: ${Band.albums[0].releaseYear}`
+                        )
+                    }
+                }
+                console.log(Band.bandInfo());
+            </script>
+        </body>
+</html>
