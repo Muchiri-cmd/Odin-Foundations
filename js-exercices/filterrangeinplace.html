@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilterInPlace</title>
+</head>
+<body>
+    <script>
+        //my solution
+        function filterRangeInPlace(arr,a,b){
+          for(i=0;i<arr.length;i++){
+            if (a >= arr[i] && arr[i]<= b){
+              //keep element 
+              continue;
+            }
+            //else delete element
+            arr.splice(i,1);
+            
+          }
+        }
+
+        /*solution
+        function filterrangeInPlace(arr,a,b){
+          for (let i=0;i<arr.length;i++){
+            let val=arr[i];
+
+            //remove if outside of interval
+            if (val<a || val > b){
+              arr.splice(i,1);
+              i--;
+            }
+          }
+        }
+        */
+
+        let arr =[5,3,8,1];
+        filterRangeInPlace(arr,1,4);//remove numbers except 1 to 4
+        console.log(arr);
+    </script>
+    
+</body>
+</html>

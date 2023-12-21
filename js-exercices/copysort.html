@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate-border</title>
+</head>
+<body>
+    
+    <script>
+        function copySorted(arr){
+            newArr=[...arr];
+            return newArr.sort();
+
+            //solution
+           //return arr.slice().sort();
+        }
+        let arr=["HTML","Javascript","CSS"];
+        let sorted=copySorted(arr);
+        console.log(sorted);//CSs,HTML,Javascript
+        console.log(arr);//original arr
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extendable-Calculator</title>
+</head>
+<body>
+    <script>
+        /*my solution
+        function Calculator(){
+            this.calculate=str=>{
+                str.split('');
+                if (str[1]=='+')
+                    return Number(str[0])+Number(str[2]);
+                else
+                    return Number(str[0])-Number(str[2]);
+            },
+            this.addMethod=function(name,func){
+                //
+
+            }
+        }*/
+
+        //revised sol
+        function Calculator(){
+            //object for storing mathematical operations
+            this.methods={
+                "-": (num1, num2) => num1 - num2,
+                "+": (num1, num2) => num1 + num2
+            };
+            //do the calculate method
+            this.calculate=function(str){
+                const [num1,operator,num2]=str.split('');
+                if (!this.methods[operator]) {
+                    return NaN;
+                }
+                return this.methods[operator](Number(num1),Number(num2));//function method
+            }
+            this.addMethod=function(name,func){
+                this.methods[name]=func;
+
+            }
+        }
+       
+
+        let calc= new Calculator;
+        console.log(calc.calculate("3+7"));//10
+
+        let powerCalc= new Calculator;
+        powerCalc.addMethod("*",(a,b)=>a*b);
+        powerCalc.addMethod("/",(a,b)=>a/b);
+        powerCalc.addMethod("**",(a,b)=>a**b);
+
+        let result=powerCalc.calculate("2**3");
+        console.log(result);
+        
+         /*solution
+        function Calculator(){
+            this.methods = {
+                " - ":(a,b) => a - b;
+                " + ":(a,b) => a + b;
+            };
+            this.calculate = function (str) {
+                let split = str.split(' '),
+                a =+ split[0],
+                op = split[1],
+                b =+ split[2];
+                if (!this.methods[op] || isNan(a) || isNan(b)) {
+                    return Nan;
+                }
+                return this.methods[op](a,b)
+            };
+            this.addMethod = function (name,func) {
+                this.methods[name]=func;
+            }
+
+        }
+        */
+    </script>
+</body>
+</html>
