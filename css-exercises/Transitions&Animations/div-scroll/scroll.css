@@ -1,0 +1,35 @@
+#container {
+    height: 300px;
+    overflow-y: scroll;
+    /*scroll-timeline-name: --squareTimeline;*/
+    position: relative;
+}
+#square {
+    background-color: deeppink;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    animation-name: rotateAnimation;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    /*animation-timeline: --squareTimeline;*/
+    animation-timeline: scroll(block nearest);
+  
+    position: absolute;
+    bottom: 0;
+  }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+#stretcher {
+    height: 600px;
+  }
+  
+  
+
