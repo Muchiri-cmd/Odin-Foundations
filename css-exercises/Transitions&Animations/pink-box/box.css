@@ -1,0 +1,21 @@
+body{
+    padding:50px;
+}
+.box{
+    display: inline-block;
+    background: pink;
+    width:200px;
+    height:200px;
+    transition:transform 300ms cubic-bezier(0.5, 0.5, 0.06, 2.52);
+    pointer-events:none;
+}
+.trigger{
+    background: #ddd;
+    width:200px;
+    height:200px;
+    border:20px solid #999;
+}
+.trigger.clicked .box{
+    transform: translate(200px,150px) rotate(20deg);
+}
+

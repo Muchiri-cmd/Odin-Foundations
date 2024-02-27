@@ -1,0 +1,89 @@
+nav {
+  padding: 50px;
+  text-align: center; }
+  nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 5px; }
+    nav > ul > li {
+      float: left;
+      width: 150px;
+      height: 65px;
+      line-height: 65px;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer; }
+      nav > ul > li:hover {
+        background: #d5d5d5;
+        border-radius: 5px; }
+      nav > ul > li ul.drop-menu {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 0; }
+        nav > ul > li ul.drop-menu li {
+          background: #666;
+          color: rgba(255, 255, 255, 0.7); }
+          nav > ul > li ul.drop-menu li:hover {
+            background: #606060; }
+          nav > ul > li ul.drop-menu li:last-child {
+            border-radius: 0px 0px 5px 5px; }
+    nav > ul ul.drop-menu li {
+      display: none; }
+    nav > ul li:hover > ul.drop-menu li {
+      display: block; }
+  nav li:hover > ul.drop-menu.menu-1 {
+    perspective: 1000px; }
+  nav li {
+    opacity: 0; }
+    nav li:nth-child(1) {
+      animation-name: menu1;
+      animation-duration: 300ms;
+      animation-delay: 100ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    nav li:nth-child(2) {
+      animation-name: menu1;
+      animation-duration: 600ms;
+      animation-delay: 200ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    nav li:nth-child(3) {
+      animation-name: menu1;
+      animation-duration: 900ms;
+      animation-delay: 300ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    nav li:nth-child(4) {
+      animation-name: menu1;
+      animation-duration: 1200ms;
+      animation-delay: 400ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    nav li:nth-child(5) {
+      animation-name: menu1;
+      animation-duration: 1500ms;
+      animation-delay: 500ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    nav li:nth-child(6) {
+      animation-name: menu1;
+      animation-duration: 1800ms;
+      animation-delay: 600ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px); } }
+
+/*# sourceMappingURL=menu.css.map */
